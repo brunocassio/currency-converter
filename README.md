@@ -9,13 +9,8 @@ upon the exchange rate active for the date of the purchase.
 ## Table of Contents
 
 - [Installation](#installation)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Documentation](#documentation)
+
 
 ## Installation
 
@@ -23,7 +18,7 @@ Provide instructions on how to install your AwesomeTool. Include prerequisites a
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/awesometool.git
+git clone https://github.com/brunocassio/currency-converter.git
 
 # Install dependencies
 mvn clean install
