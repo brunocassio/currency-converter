@@ -1,26 +1,24 @@
 package com.wex.currencyconverter.dto;
 
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PurchaseTransactionDTO {
+public class ConvertedPurchaseTransactionDTO {
 
+    private long id;
     private String description;
-
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate transactionDate;
+    private Double usDollarAmount;
 
-    private Double purchaseAmount;
+    private List<ConvertedAmountDTO> convertedAmounts;
 
 }
