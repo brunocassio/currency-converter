@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -39,7 +40,12 @@ public class PurchaseTransactionController {
     }
 
     private boolean isValidPurchaseTransaction(PurchaseTransactionDTO dto) {
-        if (dto.getPurchaseAmount() == null || dto.getTransactionDate() == null) {
+        int comparison = dto.getPurchaseAmount().compareTo(BigDecimal.ZERO);
+        if (dto.getPurchaseAmount() == null || comparison < 0) {
+            return false;
+        }
+
+        if (dto.getTransactionDate() == null) {
             return false;
         }
 
