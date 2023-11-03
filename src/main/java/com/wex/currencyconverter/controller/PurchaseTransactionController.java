@@ -32,8 +32,8 @@ public class PurchaseTransactionController {
     }
 
     @GetMapping("/{id}")
-    public List<ConvertedPurchaseTransactionDTO> retrieve(@RequestParam(name = "page", defaultValue = "0") int page,
-                                                          @RequestParam(name = "size", defaultValue = "10") int size,
+    public List<ConvertedPurchaseTransactionDTO> retrieve(@RequestParam(name = "page", defaultValue = "1") int page,
+                                                          @RequestParam(name = "size", defaultValue = "100") int size,
                                                           @PathVariable Long id) {
         return purchaseTransactionService.retrieve(PageRequest.of(page, size), id);
     }

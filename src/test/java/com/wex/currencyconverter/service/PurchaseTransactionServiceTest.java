@@ -23,6 +23,7 @@ import org.springframework.data.domain.Pageable;
 
 import static com.wex.currencyconverter.constants.Constants.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -98,7 +99,7 @@ public class PurchaseTransactionServiceTest {
                 .build();
     }
 
-    private PurchaseTransaction getPurchaseTransaction(long id, String description, LocalDate transactionDate, Double purchaseAmount) {
+    private PurchaseTransaction getPurchaseTransaction(long id, String description, LocalDate transactionDate, BigDecimal purchaseAmount) {
         return PurchaseTransaction.builder()
                 .id(id)
                 .description(description)

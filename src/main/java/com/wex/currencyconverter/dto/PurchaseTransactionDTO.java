@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
@@ -21,6 +22,6 @@ public class PurchaseTransactionDTO {
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate transactionDate;
 
-    private Double purchaseAmount;
+    private BigDecimal purchaseAmount;
 
 }

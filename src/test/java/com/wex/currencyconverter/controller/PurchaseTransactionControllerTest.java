@@ -11,7 +11,6 @@ import static com.wex.currencyconverter.util.Responses.EXPECTED_RETRIEVE_RESPONS
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import static com.wex.currencyconverter.util.Responses.EXPECTED_INSERT_REPONSE;
-import static com.wex.currencyconverter.util.Requests.EXPECTED_INSERT_REQUEST;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

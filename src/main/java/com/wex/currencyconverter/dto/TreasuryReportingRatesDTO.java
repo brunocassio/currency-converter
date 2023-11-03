@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Data
@@ -18,7 +19,7 @@ public class TreasuryReportingRatesDTO implements Serializable {
     private String country;
     private String currency;
     private String country_currency_desc;
-    private Double exchange_rate;
+    private BigDecimal exchange_rate;
     private LocalDate effective_date;
     private Integer src_line_nbr;
     private Integer record_fiscal_year;
